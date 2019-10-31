@@ -1,24 +1,3 @@
 const serverless = require('serverless-http')
-const express = require('express')
-const app = express()
-
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept',
-  )
-  next()
-})
-
-app.get('/', (req, res) => {
-  res.contentType('text/plain');
-	res.send('Hello World! ' + new Date().toISOString() + "\n")
-})
-
-const port = '8080';
-app.listen(port, () => {
-  console.log(`app start listening on port ${port}`)
-})
-
-module.exports.handler = serverless(app)
+const app = require('./app')
+module.exports.handler = serverless(app.app)

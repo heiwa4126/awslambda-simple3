@@ -17,3 +17,6 @@ package:
   exclude:
     - ".*/**"
     - "*~"
+    - "utils/**"
+    - "package.json"
+    - "*.lock"
