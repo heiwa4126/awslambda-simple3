@@ -185,3 +185,4 @@ tmp
 *.bak
 setup*.json
 .serverless
+yarn-error.log
