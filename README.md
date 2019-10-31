@@ -38,6 +38,8 @@ curl -i http://localhost:8080/
 ```
 のようにローカルでテスト。終わったら`kill %1`など。
 
+(Windowsだったら`node utils/localserver.js`で)
+
 [serverless.yml](/serverless.yml)
 をお好みで修正。
 service: や region: などを書き換えてみる。
