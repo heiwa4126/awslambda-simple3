@@ -1,0 +1,19 @@
+service: awslambda-simple3
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: ap-northeast-1
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+package:
+  individually: true
+  exclude:
+    - ".*/**"
+    - "*~"
