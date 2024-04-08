@@ -64,7 +64,6 @@ AWS での serverless.yml の書式は
 ```bash
 npm run deploy
 # `npx serverless deploy` でもOK。
-# 
 ```
 
 でデプロイ。
@@ -83,3 +82,7 @@ npm run remove
 "unable to get local issuer certificate" というエラーになったら
 たぶんそれは会社のプロキシのせい。
 バイパスするか無効にするかしてください。
+
+## TODO
+
+serverless.yml の package.patterns が汚いので整理する。
