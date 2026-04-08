@@ -7,8 +7,8 @@ const { app } = require("./app");
 // or as a promise
 const handler = serverless(app);
 module.exports.handler = async (event, context) => {
-  // you can do other things here
-  const result = await handler(event, context);
-  // and here
-  return result;
+	// you can do other things here
+	const result = await handler(event, context);
+	// and here
+	return result;
 };

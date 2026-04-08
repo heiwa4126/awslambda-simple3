@@ -16,11 +16,11 @@
 事前に
 
 ```sh
-npm install -g serverless
+pnpm install -g serverless
 ```
 
 しておく。
-`npm install -D serverless` でもいいのだが、
+`pnpm install -D serverless` でもいいのだが、
 [serverless](https://www.npmjs.com/package/serverless)
 かなり大きな依存関係を持つので使いまわす。
 
@@ -29,7 +29,7 @@ npm install -g serverless
 ```bash
 git clone https://github.com/heiwa4126/awslambda-simple3.git
 cd awslambda-simple3
-npm i
+pnpm i
 ```
 
 npm でも yarn でも OK。
@@ -42,13 +42,13 @@ layer にはしたほうがいいとは思うけど
 app.js が Express の main なので、好きなように修正する。
 
 ```bash
-npm start
+pnpm start
 curl -i http://localhost:8080/
 ```
 
 のようにローカルでテスト。
-再起動は `npm restart`。
-終了は `npm stop`。
+再起動は `pnpm restart`。
+終了は `pnpm stop`。
 
 (Windows だったら`node utils/localserver.js`で)
 
@@ -62,7 +62,7 @@ AWS での serverless.yml の書式は
 ## デプロイと削除
 
 ```bash
-npm run deploy
+pnpm run deploy
 # `npx serverless deploy` でもOK。
 ```
 
@@ -71,7 +71,7 @@ npm run deploy
 URL が表示されるので curl や WWW ブラウザでアクセス。
 
 ```bash
-npm run remove
+pnpm run remove
 ```
 
 で削除。
