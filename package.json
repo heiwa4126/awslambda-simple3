@@ -1,18 +1,22 @@
 {
-  "name": "awslambda-simple3",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "bash -c 'node utils/localserver.js &'",
-    "stop": "kill $(lsof -t -i:8080)",
-    "curl": "curl -i http://localhost:8080/",
-    "deploy": "serverless deploy",
-    "remove": "serverless remove",
-    "destroy": "serverless remove"
-  },
-  "dependencies": {
-    "express": "~4",
-    "serverless-http": "~3"
-  }
+	"name": "awslambda-simple3",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"start": "bash -c 'node utils/localserver.js &'",
+		"stop": "kill $(lsof -t -i:8080)",
+		"curl": "curl -i http://localhost:8080/",
+		"deploy": "serverless deploy",
+		"remove": "serverless remove",
+		"destroy": "serverless remove",
+		"preinstall": "pnpm audit",
+		"format": "oxfmt",
+		"lint": "oxlint",
+		"check": "oxfmt && oxlint --fix"
+	},
+	"dependencies": {
+		"express": "~4.22.1",
+		"serverless-http": "~3.2.0"
+	}
 }
