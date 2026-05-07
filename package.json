@@ -16,7 +16,7 @@
 		"check": "oxfmt && oxlint --fix"
 	},
 	"dependencies": {
-		"express": "~4.22.1",
-		"serverless-http": "~3.2.0"
+		"express": "~5.2.1",
+		"serverless-http": "~4.0.0"
 	}
 }
